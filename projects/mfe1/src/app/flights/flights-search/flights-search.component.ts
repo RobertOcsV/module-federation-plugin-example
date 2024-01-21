@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import { AuthLibService } from 'auth-lib';
 
 @Component({
   selector: 'app-flights-search',
@@ -14,5 +15,11 @@ export class FlightsSearchComponent {
   terms(): void {
     alert('Not implemented for this demo!');
   }
+
+  user = this.service.user;
+
+  // And add that:
+  constructor(private service: AuthLibService) { }
+
 
 }
